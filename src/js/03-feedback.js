@@ -7,9 +7,9 @@ const refs = {
 };
 const data = {};
 const onInput = e => {
-  data[e.target.name] = e.target.value;
-  // data.email = refs.email.value;
-  //   data.message = refs.message.value;
+  // data[e.target.name] = e.target.value;
+  data.email = refs.email.value;
+  data.message = refs.message.value;
   const inputJson = JSON.stringify(data);
   localStorage.setItem(STORAGE_KEY, inputJson);
 };
