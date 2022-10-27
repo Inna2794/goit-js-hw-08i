@@ -15,6 +15,10 @@ const onInput = e => {
 };
 const onFormSubmit = e => {
   e.preventDefault();
+  if (!data.email || !data.message) {
+    alert('Fill in all the fields');
+    return;
+  }
   console.log(JSON.parse(localStorage.getItem(STORAGE_KEY)));
   e.target.reset();
   delete data.message;
